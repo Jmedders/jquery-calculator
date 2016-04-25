@@ -13,8 +13,6 @@ $(document).ready(function() {
     operator = $(event.target).text();
     num2 = num1;
     num1 = '';
-    // console.log(num1);
-    // console.log(num2);
     valueScreen.text(operator);
   });
   //zero
@@ -62,7 +60,6 @@ $(document).ready(function() {
     else if(operator === '/'){
       num1 = parseInt(num1, 10);
       num2 = parseInt(num2, 10);
-      console.log(num1, num2)
       valueScreen.text(num2 / num1);
       num1 = valueScreen.text();
       num2 = '';
