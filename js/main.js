@@ -4,6 +4,8 @@ $(document).ready(function() {
   var num2 = "";
   var operator = "";
   //target click text on number 1-9
+  //thanks josh for division help
+  var divisionSymbol = $('div.buttons span:nth-child(2)').text();
   $('.num').click(function(){
     num1 += $(event.target).text();
     valueScreen.text(num1)
@@ -50,14 +52,14 @@ $(document).ready(function() {
       num1 = valueScreen.text();
       num2 = '';
     }
-    else if(operator === '/' && num1 == 0){
+    else if(operator === divisionSymbol && num1 == 0){
       num1 = parseInt(num1, 10);
       num2 = parseInt(num2, 10);
       valueScreen.text('Cannot divide by 0');
       num1 = '';
       num2 = '';
     }
-    else if(operator === '/'){
+    else if(operator === divisionSymbol){
       num1 = parseInt(num1, 10);
       num2 = parseInt(num2, 10);
       valueScreen.text(num2 / num1);
